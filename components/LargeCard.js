@@ -1,20 +1,27 @@
-import { Box, Image, Text, Button } from "@chakra-ui/react";
+import { Box, Image, Text, Button, Center } from "@chakra-ui/react";
 
 function LargeCard({ img, title, description, buttonText }) {
 	return (
-		<Box position='relative' py={16} cursor='pointer'>
-			<Box position='relative' h={96} minWidth='300px'>
+		<Center position='relative' py={16} cursor='pointer'>
+			<Box>
 				<Image
 					src={img}
 					alt=''
 					layout='fill'
 					objectFit='cover'
 					borderRadius='2xl'
+					h={96}
+					minWidth='300px'
 				/>
 			</Box>
 
-			<Box position='absolute' top={32} left={12}>
-				<Text fontSize='4xl' fontWeight='semibold' mb={3} w={64}>
+			<Box position='absolute' top={32} left={{ sm: 12, lg: 40 }}>
+				<Text
+					fontSize={["lg", "xl", "3xl"]}
+					fontWeight='semibold'
+					mb={3}
+					w={64}
+				>
 					{title}
 				</Text>
 				<Text>{description}</Text>
@@ -30,7 +37,7 @@ function LargeCard({ img, title, description, buttonText }) {
 					{buttonText}
 				</Button>
 			</Box>
-		</Box>
+		</Center>
 	);
 }
 

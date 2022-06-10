@@ -37,7 +37,11 @@ function Banner() {
 					my={3}
 					fontWeight='bold'
 					variant='ghost'
+					/* sx={{
+						outline: "none",
+					}} */
 					// border='none'
+
 					_hover={{ boxShadow: "xl" }}
 					transition='duration 150'
 					_active={{

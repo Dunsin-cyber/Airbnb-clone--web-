@@ -6,6 +6,7 @@ import SmallCard from "../components/SmallCard";
 import MediumCard from "../components/MediumCard";
 import LargeCard from "../components/LargeCard";
 import Footer from "../components/Footer";
+import { DeviceMobileIcon } from "@heroicons/react/outline";
 
 export default function Home({ exploreData, cardsData }) {
 	return (
@@ -50,11 +51,18 @@ export default function Home({ exploreData, cardsData }) {
 						Live Anywhere
 					</Text>
 
-					<Flex gap={3} overflow='scroll' p={3} ml={-3}>
+					<div
+						/* gap={3}
+						overflow='scroll'
+						overflowX='auto'
+						p={3}
+						ml={-3} */
+						className='flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3'
+					>
 						{cardsData?.map(({ img, title }) => (
 							<MediumCard img={img} key={img} title={title} />
 						))}
-					</Flex>
+					</div>
 				</Box>
 
 				<LargeCard
