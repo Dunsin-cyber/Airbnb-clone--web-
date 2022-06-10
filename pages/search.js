@@ -1,10 +1,11 @@
-import { Box, Text, Show, Flex } from "@chakra-ui/react";
+import { Box, Text, Show, Flex, Center } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Tops from "../components/shared/Tops";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
+// import Map from "../components/Map";
 
 //reuseable utility classes
 function Search({ searchResults }) {
@@ -23,7 +24,7 @@ function Search({ searchResults }) {
 				placeholder={`${location} | ${range} |  ${numberOfGuest} guests`}
 			/>
 			{/* left */}
-			<Flex>
+			<Center>
 				<Box flexGrow pt={14} px={6}>
 					<Text fontWeight='semibold' fontSize='xs'>
 						300+ stays - {range} - for {numberOfGuest} guests
@@ -63,7 +64,12 @@ function Search({ searchResults }) {
 						)}
 					</Flex>
 				</Box>
-			</Flex>
+				{/* <Hide below='lg'> */}
+				{/* <Box minWidth='600px'>
+					<Map />
+				</Box> */}
+				{/* </Hide> */}
+			</Center>
 
 			<Footer />
 		</Box>

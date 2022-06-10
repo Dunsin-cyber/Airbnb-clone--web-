@@ -9,8 +9,9 @@ function InfoCard({ img, price, star, total, description, title, location }) {
 			display='flex'
 			py={7}
 			px={2}
+			mt={5}
 			borderBottom={1}
-			boxShadow='md'
+			boxShadow='sm'
 			cursor='pointer'
 			_hover={{ boxShadow: "xl", opacity: "80%" }}
 			transition='0.2s ease-out'
